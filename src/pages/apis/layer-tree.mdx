@@ -1,0 +1,87 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn everything there is to know about the Protocol API and integrate Protocol into your product.'
+
+export const sections = [
+  { title: '使用者模型', id: 'user-model' },
+  { title: '列表出所有使用者', id: 'list-all-users' },
+  
+]
+
+<HeroPattern />
+
+# User API
+
+此API主要控制使用者的新增、修改與刪除。
+（本系統的使用者架構僅實作簡單的權限機制，更複雜的RBAC架構與其他權限管理模型尚再研擬中）{{ className: 'lead' }}
+
+## 使用者模型 {{ id:'user-model' }}
+使用者模型主要記載使用者名稱、電子郵件地址、密碼等資訊。
+
+### 模型屬性
+<Properties>
+  <Property name="id" type="string">
+    使用者的唯一識別碼。
+  </Property>
+  <Property name="name" type="string">
+    使用者的用戶名。
+  </Property>
+  <Property name="email" type="string">
+    使用者的電子郵件地址。
+  </Property>
+  <Property name="password" type="string">
+    使用者的加密密碼。
+  </Property>
+  <Property name="isRoot" type="boolean">
+    用於確定使用者是否具有管理員訪問權限。
+  </Property>
+</Properties>
+
+---
+
+## 列表出所有使用者 {{ tag: 'GET', label: '/api/user', id:'list-all-users' }}
+<Row>
+  <Col>
+    這個端點允許您檢索所有使用者的清單。
+  </Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/api/user">
+      ```bash {{ title: 'cURL' }}
+      curl --location 'http://domain/api/user' \
+        --header 'Authorization: Bearer {Token}'
+      ```
+
+      ```js
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", "Bearer {Token}");
+
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+
+      fetch("http://domain/api/user", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+      ```
+
+      ```python
+      import requests
+
+      url = "http://domain/api/user"
+
+      payload = {}
+      headers = {
+        'Authorization': 'Bearer {Token}'
+      }
+
+      response = requests.request("GET", url, headers=headers, data=payload)
+
+      print(response.text)
+      ```
+    </CodeGroup>
+  </Col>
+</Row>

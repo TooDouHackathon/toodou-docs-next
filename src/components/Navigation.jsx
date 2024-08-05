@@ -185,35 +185,19 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: '系統使用說明',
+    title: 'API說明文件',
     links: [
-      { title: '歡迎使用Maplon', href: `/web` },
-      { title: '客戶端操作說明', href: `/web/client` },
-      { title: '管理平台操作說明', href: `/web/cms` },
+      { title: 'Toodou API Introduction', href: `/apis` },
+      { title: '和泰使用者 API', href: `/apis/user` },
+      { title: 'Yoxi API', href: `/apis/yoxi` },
+      { title: '去趣 API', href: `/apis/chictrip` },
+      { title: 'Irent API', href: `/apis/irent` },
     ],
   },
   {
-    title: 'API說明文件',
+    title: '開發功能列表',
     links: [
-      { title: 'Toodou Open API', href: `/apis` },
-      { title: '驗證', href: `/apis/auth` },
-      { title: '使用者', href: `/apis/user` },
-      { title: '哈密瓜方案', href: `/apis/plan` },
-      { title: '地圖設定', href: `/apis/map-view` },
-      { title: '圖層樹', href: `/apis/layer-tree` },
-      { title: '故事地圖', href: `/apis/story-layer` },
-      { title: '向量圖層', href: `/apis/vector-layer` },
-      { title: 'WMTS圖層', href: `/apis/wmts-layer` },
-      { title: '網頁資訊設定', href: `/apis/web-settings` }
-      // { title: 'Auth API', href: '/api/auth' },
-      // { title: 'User API', href: '/api/user' },
-      // { title: 'Plan API', href: '/api/plan' },
-      // { title: 'MapView API', href: '/api/map-view' },
-      // { title: 'LayerTree API', href: '/api/layer-tree' },
-      // { title: 'StoryLayer API', href: '/api/story-layer' },
-      // { title: 'VectorLayer API', href: '/api/vector-layer' },
-      // { title: 'WmtsLayer API', href: '/api/wmts-layer' },
-      // { title: 'WebSettings API', href: '/api/web-settings' }
+      { title: '目前還沒有功能', href: `/function` },
     ],
   },
 ]
